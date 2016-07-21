@@ -101,12 +101,11 @@ users["Avril"][:pets]["colin"]
 users["Erik"][:favourite_numbers].min 
 
 
-6. Return an array of Avril's favorite numbers that are even
-even_numbers = Hash.new
-  users["Avril"][:favourite_numbers] do
-    even_numbers.push(number)
+6. Return an array of Avrils favourite numbers that are even
+array_favourite_numbers = users["Avril"][:favourite_numbers]
+  for numbers in array_favourite_numbers
+    puts numbers if numbers.to_f%2 == 0
   end
-  puts even_numbers
 
 
 7. Return an array of Jonathans favourite numbers, sorted in ascending order and excluding duplicates
